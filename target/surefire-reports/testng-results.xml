@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-02T13:01:23 IST" name="Suite" finished-at="2026-01-02T13:01:42 IST" duration-ms="19086">
+    <groups>
+    </groups>
+    <test started-at="2026-01-02T13:01:23 IST" name="Test" finished-at="2026-01-02T13:01:42 IST" duration-ms="19086">
+      <class name="tests.BookingAPITest2">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.BookingAPITest2@1e81f160]" started-at="2026-01-02T13:01:38 IST" name="setup" finished-at="2026-01-02T13:01:38 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="CreateNewbookingTest()[pri:1, instance:tests.BookingAPITest2@1e81f160]" started-at="2026-01-02T13:01:38 IST" name="CreateNewbookingTest" description="verify the new booking with post call " finished-at="2026-01-02T13:01:40 IST" duration-ms="1234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewbookingTest -->
+        <test-method signature="updatebooking()[pri:2, instance:tests.BookingAPITest2@1e81f160]" started-at="2026-01-02T13:01:40 IST" name="updatebooking" description="verify the update booking  " finished-at="2026-01-02T13:01:41 IST" duration-ms="1138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatebooking -->
+        <test-method signature="deletebooking()[pri:3, instance:tests.BookingAPITest2@1e81f160]" started-at="2026-01-02T13:01:41 IST" name="deletebooking" description="verifying the delete booking  " finished-at="2026-01-02T13:01:42 IST" duration-ms="1114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletebooking -->
+      </class> <!-- tests.BookingAPITest2 -->
+      <class name="tests.BookingAPITest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.BookingAPITest@4b5189ac]" started-at="2026-01-02T13:01:23 IST" name="setup" finished-at="2026-01-02T13:01:25 IST" duration-ms="2471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="CreateNewbookingTest()[pri:1, instance:tests.BookingAPITest@4b5189ac]" started-at="2026-01-02T13:01:25 IST" name="CreateNewbookingTest" description="verify the new booking with post call " finished-at="2026-01-02T13:01:34 IST" duration-ms="9183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewbookingTest -->
+        <test-method signature="updatebooking()[pri:2, instance:tests.BookingAPITest@4b5189ac]" started-at="2026-01-02T13:01:34 IST" name="updatebooking" description="verify the update booking  " finished-at="2026-01-02T13:01:37 IST" duration-ms="2576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatebooking -->
+        <test-method signature="deletebooking()[pri:3, instance:tests.BookingAPITest@4b5189ac]" started-at="2026-01-02T13:01:37 IST" name="deletebooking" description="verifying the delete booking  " finished-at="2026-01-02T13:01:38 IST" duration-ms="1246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletebooking -->
+      </class> <!-- tests.BookingAPITest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
