@@ -71,6 +71,10 @@ public class Breakout_restfull extends BaseTest {
 		Assert.assertTrue(message.contains("Object with id = "+bookingid+" has been deleted."));
 	}
 	
+	//already deleted product again trying to delete. what message it will give
+	// try to create multiple product multiple times. 
+	//Pass additional field which does not allow.
+	
 	
 	
 

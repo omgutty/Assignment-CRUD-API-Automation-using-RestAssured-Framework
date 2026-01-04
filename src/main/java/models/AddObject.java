@@ -1,5 +1,6 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
@@ -31,6 +32,12 @@ public class AddObject {
 		public String CPUmodel;
 		@JsonProperty ("Harddisk size")
 		public String Harddisksize;
+		
+		//when we say null, dot send , when i value send as a payload. 
+		//So that we can use this add pojp for update object pojo instaead
+		
+		@JsonInclude(JsonInclude.Include.NON_NULL)
+		public String color;
 		
 
 	}

@@ -1,5 +1,7 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,7 +25,9 @@ public class UpdateObject {
 
 		public int year;
 		public double price;
+		@JsonProperty ("CPU model")
 		public String CPUmodel;
+		@JsonProperty ("Harddisk size")
 		public String Harddisksize;
 		public String color;
 		
