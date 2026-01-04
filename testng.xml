@@ -10,9 +10,10 @@
 
   <test thread-count="5" name="Test">
     <classes>
-    	 <class name="tests.BookingAPITest"/>
+    	<!-- <class name="tests.BookingAPITest"/>
+      	 <class name="tests.BookingAPITest2"/>-->
       	 
-      	 <class name="tests.BookingAPITest2"/>
+      	 <class name="tests.Breakout_restfull"></class>
     </classes>
   </test>
 </suite> 

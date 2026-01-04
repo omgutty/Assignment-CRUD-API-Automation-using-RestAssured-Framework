@@ -5,6 +5,8 @@ import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.aventstack.chaintest.plugins.ChainTestListener;
+
 import base.BaseTest;
 import enums.APIEndPoints;
 import factory.ObjectFactory;
@@ -26,9 +28,9 @@ public class Breakout_restfull extends BaseTest {
 		Response response= APIUtility.Post(req_specification,APIEndPoints.CREAT_OBJECT.getpath(), object);
 		response.then().spec(res_specification);
 		bookingid=response.jsonPath().get("id");
-		System.out.println("Booking ID : "+bookingid);
+		ChainTestListener.log("Booking ID : "+bookingid);
 		String createdAt=response.jsonPath().get("createdAt");
-		Assert.assertEquals(response.getStatusCode(), 200,"Response is not matched.");
+		ChainTestListener.log("Response Created at :"+createdAt);
 		Assert.assertNotNull(createdAt, "createdAt tag is null in response");
 	}
 	
@@ -47,10 +49,12 @@ public class Breakout_restfull extends BaseTest {
 		Response response= APIUtility.put(req_specification, APIEndPoints.UPDATE_OBJECT.getpath(),update,pathparameter,null,null);
 		response.then().spec(res_specification);
 		double updatedprice=response.jsonPath().getDouble("data.price");
+		
 		String coulour=response.jsonPath().get("data.color");
+		ChainTestListener.log("Response data object color : "+response.jsonPath().get("data.color"));
 		String updatedAt=response.jsonPath().get("updatedAt");
+		ChainTestListener.log("Response Updated At : "+response.jsonPath().get("updatedAt"));
 		Assert.assertNotNull(updatedAt, "updatedAt tag is null in response");
-		Assert.assertEquals(response.getStatusCode(), 200,"Response is not matched.");
 		Assert.assertEquals(updatedprice, 2049.99, "Price is not updated");
 		Assert.assertEquals(coulour, "silver","colour tag is mismatched");
 	}
@@ -59,14 +63,12 @@ public class Breakout_restfull extends BaseTest {
 	public void DeleteObject() {
 		
 		Map<String, Object> pathparameter= Map.of("id", bookingid);
-		Response response= APIUtility.delete(req_specification, APIEndPoints.UPDATE_OBJECT.getpath(), pathparameter, null, null);
+		Response response= APIUtility.delete(req_specification, APIEndPoints.DELETE_OBJECT.getpath(), pathparameter, null, null);
 		
 		response.then().spec(res_specification);
-		Assert.assertEquals(response.getStatusCode(), 200,"Response is not matched.");
 		String message=response.jsonPath().get("message");
-		System.out.println(message);
-		Assert.assertTrue(message.contains("has been deleted."));
-		
+		ChainTestListener.log(message);
+		Assert.assertTrue(message.contains("Object with id = "+bookingid+" has been deleted."));
 	}
 	
 	

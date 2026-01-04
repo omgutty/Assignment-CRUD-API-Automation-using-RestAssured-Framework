@@ -1,5 +1,7 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,18 +15,21 @@ import models.Booking.Bookingdates;
 public class AddObject {
 	
 	public String name;
-	public data data;
+	public productdata data;
 	
 	
 	@Data
 	@AllArgsConstructor
 	@NoArgsConstructor
 	@Builder
-	public static class data {
+	public static class productdata {
 
 		public int year;
 		public double price;
+		//Q: with out this @jsonproperty also for me it worked. 
+		@JsonProperty ("CPU model")//By using this, it will accept the space in key
 		public String CPUmodel;
+		@JsonProperty ("Harddisk size")
 		public String Harddisksize;
 		
 

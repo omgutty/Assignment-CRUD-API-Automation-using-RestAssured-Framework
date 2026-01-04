@@ -6,7 +6,8 @@ public enum APIEndPoints {
 	UPDATE_BOOKING("/booking/{id}"),
 	DELETE_BOOKING("/booking/{id}"),
 	CREAT_OBJECT("/objects"),
-	UPDATE_OBJECT("/objects/{id}");
+	UPDATE_OBJECT("/objects/{id}"),
+	DELETE_OBJECT("/objects/{id}");
 	
 	
 	

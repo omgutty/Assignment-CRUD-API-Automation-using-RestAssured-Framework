@@ -31,7 +31,9 @@ public class BaseTest {
 		
 		 res_specification= new ResponseSpecBuilder()
 				 .log(LogDetail.ALL)
-				 //.expectContentType(ContentType.JSON)
+				 
+				 .expectContentType(ContentType.JSON)
+				 .expectStatusCode(200)
 				 .build();
 		
 	}
